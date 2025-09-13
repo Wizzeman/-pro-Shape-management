@@ -5,7 +5,7 @@ namespace Pro_Shape_management
     abstract class Shape
     {
         public abstract double Area();
-        public abstract double Primeter();
+        public abstract double Perimeter();
 
     }
 
@@ -28,7 +28,7 @@ namespace Pro_Shape_management
             return (h * b) / 2;
         }
 
-        public override double Primeter()
+        public override double Perimeter()
         {
             return a + b + c;
         }
@@ -46,7 +46,7 @@ namespace Pro_Shape_management
             return a * a;
         }
 
-        public override double Primeter()
+        public override double Perimeter()
         {
             return a*4;
         }
@@ -64,7 +64,7 @@ namespace Pro_Shape_management
             return Math.PI*r*r;
         }
 
-        public override double Primeter()
+        public override double Perimeter()
         {
             return Math.PI*r*2;
         }
@@ -78,14 +78,14 @@ namespace Pro_Shape_management
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Title = "Mr.Wizzeman's pro shape management";
-            System.Console.WriteLine("What is your shape ? (circule , triangle , square)");
+            System.Console.WriteLine("What is your shape ? (circle , triangle , square)");
             string choice = Console.ReadLine().ToLower();
             Shape shape = null;
 
             switch (choice)
             {
 
-                case "circule":
+                case "circle":
                     System.Console.WriteLine("please insert radios ");
                     System.Console.WriteLine("r= ");
                     double r = Convert.ToDouble(Console.ReadLine());
@@ -113,7 +113,7 @@ namespace Pro_Shape_management
                     break;
 
                 default:
-                    System.Console.WriteLine("fuck you");
+                    System.Console.WriteLine("Non defined");
                     break;
             }
 
@@ -127,4 +127,5 @@ namespace Pro_Shape_management
             Console.ReadKey();
         }
     }
+
 }
